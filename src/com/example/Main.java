@@ -31,6 +31,13 @@ public class Main {
 //            Double.max()
         }
 
+        // Calcular el precio medio del array
+        double avgPrice = sumPrice / products.length;
 
+
+
+        // Imprimir estadísticas
+        System.out.println("Precio total de los productos (€): " + sumPrice + "€");
+        System.out.println("Precio medio de los productos (€): " + avgPrice + "€");
     }
 }
