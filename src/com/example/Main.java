@@ -25,13 +25,17 @@ public class Main {
 
         // Calcular precio total
         double sumPrice = 0d;
+        int countWithPrice = 0;
+
         for (int i = 0; i < products.length; i++) {
-            if (products[i].getUnitCost() != null)
+            if (products[i].getUnitCost() != null) {
                 sumPrice += products[i].getUnitCost();
+                countWithPrice++;
+            }
         }
 
         // Calcular el precio medio del array
-        double avgPrice = sumPrice / products.length;
+        double avgPrice = sumPrice / countWithPrice;
 
         // Calcular precio máximo
         double maxPrice = 0d;
@@ -43,6 +47,8 @@ public class Main {
         // Imprimir estadísticas
         System.out.println("Precio total de los productos (€): " + sumPrice + "€");
         System.out.println("Precio medio de los productos (€): " + avgPrice + "€");
-        System.out.println("Precio medio de los productos (€): " + maxPrice + "€");
+        System.out.println("Precio máximo de los productos (€): " + maxPrice + "€");
+        System.out.println("Número total de productos: " + products.length);
+        System.out.println("Número de productos con precio asignado: " + countWithPrice);
     }
 }
