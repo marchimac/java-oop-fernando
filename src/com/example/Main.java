@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Product product1 = new Product("SmartPhone", "iPhone XS", "Apple", 25, 100, 600.0d);
+        Product product1 = new Product("SmartPhone", "iPhone XS", "Apple", 25, 100, 900.0d);
         Product product2 = new Product("Portátil", "xj42", "Asus", 12, 26, 800.0d);
         Product product3 = new Product("Cafetera", "Essenza", "Nespresso", 5, 31, 430.0d);
         Product product4 = new Product("Aspiradora", "J7", "Roomba", 1, 50, 575.0d);
@@ -28,16 +28,21 @@ public class Main {
         for (int i = 0; i < products.length; i++) {
             if (products[i].getUnitCost() != null)
                 sumPrice += products[i].getUnitCost();
-//            Double.max()
         }
 
         // Calcular el precio medio del array
         double avgPrice = sumPrice / products.length;
 
-
+        // Calcular precio máximo
+        double maxPrice = 0d;
+        for (Product product : products){
+                    if (product.getUnitCost() != null && product.getUnitCost() > maxPrice)
+                        maxPrice = product.getUnitCost();
+        };
 
         // Imprimir estadísticas
         System.out.println("Precio total de los productos (€): " + sumPrice + "€");
         System.out.println("Precio medio de los productos (€): " + avgPrice + "€");
+        System.out.println("Precio medio de los productos (€): " + maxPrice + "€");
     }
 }
