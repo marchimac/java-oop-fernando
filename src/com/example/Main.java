@@ -35,6 +35,7 @@ public class Main {
         }
 
         // Calcular el precio medio del array
+//        double avgPrice = sumPrice / products.length;
         double avgPrice = sumPrice / countWithPrice;
 
         // Calcular precio máximo
