@@ -3,12 +3,12 @@ package com.example;
 public class Product {
 
     // atributos
-    String description;
-    String model;
-    String manufacturer;
-    Integer reference;
-    Integer quantity;
-    Double unitCost;
+    private String description;
+    private String model;
+    private String manufacturer;
+    private Integer reference;
+    private Integer quantity;
+    private Double unitCost;
 
 
     // constructores

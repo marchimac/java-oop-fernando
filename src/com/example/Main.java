@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -10,10 +12,14 @@ public class Main {
         Product product4 = new Product("Aspiradora", "J7", "Roomba", 1, 50, 575.0);
         Product product5 = new Product("Hi-Fi", "202-D", "Yamaha", 78, 16, 449.0);
 
+        Product[] arrayProducts = {product1, product2, product3, product4, product5};
+
         System.out.println(product1);
         System.out.println(product2);
         System.out.println(product3);
         System.out.println(product4);
         System.out.println(product5);
+
+        System.out.println(Arrays.toString(arrayProducts));
     }
 }
