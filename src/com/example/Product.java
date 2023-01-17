@@ -77,8 +77,6 @@ public class Product {
 
 
     // toString
-
-
     @Override
     public String toString() {
         return "Producto: " +
