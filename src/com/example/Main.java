@@ -10,7 +10,7 @@ public class Main {
         Product product2 = new Product("Portátil", "xj42", "Asus", 12, 26, 800.0d);
         Product product3 = new Product("Cafetera", "Essenza", "Nespresso", 5, 31, 430.0d);
         Product product4 = new Product("Aspiradora", "J7", "Roomba", 1, 50, 575.0d);
-        Product product5 = new Product("Hi-Fi", "202-D", "Yamaha", 78, 16, 449.0d);
+        Product product5 = new Product("Hi-Fi", "202-D", "Yamaha", 78, 16, 399.0d);
 
         // Array de product
         Product[] products = {product1, product2, product3, product4, product5};
@@ -36,20 +36,22 @@ public class Main {
 
         // Calcular el precio medio del array
 //        double avgPrice = sumPrice / products.length;
-        double avgPrice = sumPrice / countWithPrice;
+//        double avgPrice = sumPrice / countWithPrice;
 
         // Calcular precio máximo
-        double maxPrice = 0d;
-        for (Product product : products){
-                    if (product.getUnitCost() != null && product.getUnitCost() > maxPrice)
-                        maxPrice = product.getUnitCost();
-        };
+        ;
 
         // Imprimir estadísticas
-        System.out.println("Precio total de los productos (€): " + sumPrice + "€");
-        System.out.println("Precio medio de los productos (€): " + avgPrice + "€");
-        System.out.println("Precio máximo de los productos (€): " + maxPrice + "€");
+        System.out.println("Precio total de los productos: " + sumPrice + "€");
+//        System.out.println("Precio máximo de los productos: " + maxPrice + "€");
         System.out.println("Número total de productos: " + products.length);
         System.out.println("Número de productos con precio asignado: " + countWithPrice);
+
+        ProductStats productStats = new ProductStats();
+        double avgPrices = productStats.avgPrices(products);
+        System.out.println("Precio medio de los productos: " + avgPrices + "€");
+
+        double minPrice = productStats.minPrice(products);
+        System.out.println("El precio más barato es: " + minPrice + "€");
     }
 }
